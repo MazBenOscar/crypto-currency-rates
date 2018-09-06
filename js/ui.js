@@ -22,4 +22,18 @@ class UI {
       });
     });
   }
+
+  //   Print a message with 2 parameters, message and classes
+  printMessage(message, className) {
+    const div = document.createElement("div");
+
+    //Add the classes
+    div.className = className;
+    // Add the message
+    div.appendChild(document.createTextNode(message));
+
+    const messageDiv = document.querySelector(".messages");
+
+    messageDiv.appendChild(div);
+  }
 }

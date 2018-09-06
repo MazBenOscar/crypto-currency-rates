@@ -16,4 +16,15 @@ form.addEventListener("submit", e => {
   const cryptoCurrencySelect = document.getElementById("cryptocurrency").value;
 
   console.log(currencySelect + ":" + cryptoCurrencySelect);
+
+  //Validate that the select has values
+  if (currencySelect === "" || cryptoCurrencySelect === "") {
+    //display an error
+    ui.printMessage(
+      "Please make a selection from both fields",
+      "deep-orange darken-4 card-panel"
+    );
+  } else {
+    console.log("success");
+  }
 });
