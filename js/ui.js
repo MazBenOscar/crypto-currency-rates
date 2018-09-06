@@ -35,5 +35,10 @@ class UI {
     const messageDiv = document.querySelector(".messages");
 
     messageDiv.appendChild(div);
+
+    //Remove Message
+    setTimeout(() => {
+      document.querySelector(".messages div").remove();
+    }, 3000);
   }
 }
