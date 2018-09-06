@@ -15,8 +15,6 @@ form.addEventListener("submit", e => {
   //read cryptocurrency
   const cryptoCurrencySelect = document.getElementById("cryptocurrency").value;
 
-  console.log(currencySelect + ":" + cryptoCurrencySelect);
-
   //Validate that the select has values
   if (currencySelect === "" || cryptoCurrencySelect === "") {
     //display an error
@@ -27,7 +25,7 @@ form.addEventListener("submit", e => {
   } else {
     // Query the REST API
     cryptoAPI.queryAPI(currencySelect, cryptoCurrencySelect).then(data => {
-      ui.displayResult(data.result[0]);
+      ui.displayResult(data.result[0], currencySelect);
     });
   }
 });

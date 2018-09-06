@@ -41,4 +41,29 @@ class UI {
       document.querySelector(".messages div").remove();
     }, 3000);
   }
+
+  displayResult(result, currency) {
+    //Read the currency
+    let currencyName;
+    currencyName = "price_" + currency.toLowerCase();
+
+    // read the result from the object
+    const value = result[currencyName];
+
+    console.log(value);
+
+    let HTMLTemplate = "";
+
+    HTMLTemplate += `
+        <div class="card green darken-3">
+            <div class="card-content white-text">
+                <span class="card-title">Result</span>
+                <p>The price of ${result.name} in ${currency} is ${value}</p>
+            </div>
+        </div>
+    `;
+
+    const divResult = document.querySelector("#result");
+    divResult.innerHTML = HTMLTemplate;
+  }
 }
