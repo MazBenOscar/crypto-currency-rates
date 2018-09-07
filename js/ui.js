@@ -51,7 +51,7 @@ class UI {
     const value = result[currencyName];
 
     //Remove the previous result
-    const prevResult = document.querySelector("#result >div");
+    const prevResult = document.querySelector("#result > div");
     if (prevResult) {
       prevResult.remove();
     }
