@@ -50,6 +50,12 @@ class UI {
     // read the result from the object
     const value = result[currencyName];
 
+    //Remove the previous result
+    const prevResult = document.querySelector("#result >div");
+    if (prevResult) {
+      prevResult.remove();
+    }
+
     let HTMLTemplate = "";
 
     HTMLTemplate += `
@@ -64,7 +70,23 @@ class UI {
         </div>
     `;
 
-    const divResult = document.querySelector("#result");
-    divResult.innerHTML = HTMLTemplate;
+    //prints Spinner
+    this.showSpinner();
+
+    setTimeout(() => {
+      //Print the result
+      const divResult = document.querySelector("#result");
+      divResult.innerHTML = HTMLTemplate;
+
+      //Hide Spinner
+      document.querySelector(".spinner img").remove();
+    }, 2500);
+  }
+
+  //Prints the spinner
+  showSpinner() {
+    const spinnerGIF = document.createElement("img");
+    spinnerGIF.src = "img/spinner.gif";
+    document.querySelector(".spinner").appendChild(spinnerGIF);
   }
 }
