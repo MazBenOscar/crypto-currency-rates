@@ -50,15 +50,16 @@ class UI {
     // read the result from the object
     const value = result[currencyName];
 
-    console.log(value);
-
     let HTMLTemplate = "";
 
     HTMLTemplate += `
-        <div class="card green darken-3">
+        <div class="card cyan lighten-1">
             <div class="card-content white-text">
                 <span class="card-title">Result</span>
                 <p>The price of ${result.name} in ${currency} is ${value}</p>
+                <p>Change last hour: ${result.percent_change_1h}%</p>
+                <p>Change last day: ${result.percent_change_24h}%</p>
+                <p>Change last week: ${result.percent_change_7d}%</p>
             </div>
         </div>
     `;
