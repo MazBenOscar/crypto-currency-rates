@@ -1,0 +1,24 @@
+{
+  "name": "crypto-currency-rates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MazBenOscar/crypto-currency-rates.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage":"https://mazbenoscar.github.io/crypto-currency-rates",
+  "bugs": {
+    "url": "https://github.com/MazBenOscar/crypto-currency-rates/issues"
+  },
+  "homepage": "https://github.com/MazBenOscar/crypto-currency-rates#readme",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}
